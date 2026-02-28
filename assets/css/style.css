@@ -1,0 +1,618 @@
+/* ============================================
+   New Life Hutto - Church Website Template
+   A free, open-source template for small churches
+   ============================================ */
+
+:root {
+    /* Colors - Dark theme with warm accents */
+    --color-bg: #1a1a2e;
+    --color-bg-light: #242442;
+    --color-bg-card: #2d2d4a;
+    --color-primary: #e8b86d;
+    --color-primary-dark: #c9983d;
+    --color-secondary: #a8dadc;
+    --color-text: #f1f1f1;
+    --color-text-muted: #a0a0b8;
+    --color-white: #ffffff;
+    --color-black: #0d0d1a;
+    
+    /* Typography */
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 6rem;
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --radius-full: 9999px;
+    
+    /* Transitions */
+    --transition: 0.3s ease;
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: var(--space-sm);
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+
+p {
+    margin-bottom: var(--space-sm);
+    color: var(--color-text-muted);
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--color-primary-dark);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-black);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    color: var(--color-black);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-black);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border-color: var(--color-text-muted);
+    color: var(--color-text);
+}
+
+.btn-outline:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(26, 26, 46, 0.95);
+    backdrop-filter: blur(10px);
+    padding: var(--space-sm) 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo img {
+    height: 50px;
+    width: auto;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: var(--space-md);
+}
+
+.nav-menu a {
+    color: var(--color-text);
+    font-weight: 500;
+    padding: var(--space-xs) 0;
+    position: relative;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: var(--transition);
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+    width: 100%;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-xs);
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 2px;
+    background-color: var(--color-text);
+    transition: var(--transition);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-light) 50%, var(--color-bg) 100%);
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 20%, rgba(232, 184, 109, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(168, 218, 220, 0.1) 0%, transparent 50%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: var(--space-xl) var(--space-md);
+}
+
+.hero h1 {
+    color: var(--color-white);
+    margin-bottom: var(--space-sm);
+}
+
+.hero .tagline {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.hero .subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-bottom: var(--space-lg);
+}
+
+.service-times {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    flex-wrap: wrap;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-md);
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-lg);
+    min-width: 180px;
+    border: 1px solid rgba(232, 184, 109, 0.2);
+}
+
+.service .day {
+    font-size: 0.875rem;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-xs);
+}
+
+.service .time {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-white);
+    font-family: var(--font-heading);
+}
+
+.service .type {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+}
+
+/* Welcome Section */
+.welcome {
+    padding: var(--space-xl) 0;
+    text-align: center;
+}
+
+.welcome h2 {
+    color: var(--color-white);
+    margin-bottom: var(--space-sm);
+}
+
+.welcome > .container > p {
+    max-width: 600px;
+    margin: 0 auto var(--space-lg);
+    font-size: 1.125rem;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.feature {
+    padding: var(--space-lg) var(--space-md);
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-lg);
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    border-color: rgba(232, 184, 109, 0.3);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-md);
+}
+
+.feature h3 {
+    color: var(--color-white);
+    margin-bottom: var(--space-sm);
+}
+
+/* Scripture Banner */
+.scripture-banner {
+    padding: var(--space-xl) 0;
+    background: linear-gradient(135deg, rgba(232, 184, 109, 0.1) 0%, rgba(168, 218, 220, 0.05) 100%);
+    text-align: center;
+}
+
+.scripture-banner blockquote {
+    font-family: var(--font-heading);
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    color: var(--color-white);
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.scripture-banner cite {
+    display: block;
+    margin-top: var(--space-md);
+    font-size: 1rem;
+    color: var(--color-primary);
+    font-style: normal;
+}
+
+/* Prayer Section */
+.prayer-section {
+    padding: var(--space-xl) 0;
+    text-align: center;
+    background-color: var(--color-bg-light);
+}
+
+.prayer-section h2 {
+    color: var(--color-white);
+}
+
+.prayer-section p {
+    max-width: 500px;
+    margin: 0 auto var(--space-md);
+}
+
+/* Location Section */
+.location {
+    padding: var(--space-xl) 0;
+    text-align: center;
+}
+
+.location h2 {
+    color: var(--color-white);
+    margin-bottom: var(--space-lg);
+}
+
+.location-info {
+    background-color: var(--color-bg-card);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.address p {
+    color: var(--color-text);
+    font-size: 1.125rem;
+    margin-bottom: var(--space-xs);
+}
+
+.address .btn {
+    margin-top: var(--space-md);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--color-black);
+    padding: var(--space-xl) 0 var(--space-md);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-lg);
+}
+
+.footer-logo {
+    height: 60px;
+    width: auto;
+    margin-bottom: var(--space-sm);
+}
+
+.footer-brand p {
+    font-size: 0.875rem;
+}
+
+.footer-links h4,
+.footer-social h4 {
+    color: var(--color-white);
+    margin-bottom: var(--space-md);
+    font-size: 1rem;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: var(--space-sm);
+}
+
+.footer-links a {
+    color: var(--color-text-muted);
+}
+
+.footer-links a:hover {
+    color: var(--color-primary);
+}
+
+.social-links {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--color-bg-card);
+    padding-top: var(--space-md);
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.875rem;
+}
+
+/* Page Header (for inner pages) */
+.page-header {
+    padding: calc(var(--space-xl) + 80px) 0 var(--space-xl);
+    text-align: center;
+    background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-light) 100%);
+}
+
+.page-header h1 {
+    color: var(--color-white);
+}
+
+.page-header p {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Content Sections */
+.content-section {
+    padding: var(--space-xl) 0;
+}
+
+.content-section.alt {
+    background-color: var(--color-bg-light);
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+    align-items: center;
+}
+
+.content-text h2 {
+    color: var(--color-white);
+}
+
+/* Cards */
+.card {
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.card:hover {
+    border-color: rgba(232, 184, 109, 0.3);
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: var(--space-md);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--space-xs);
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.875rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    background-color: var(--color-bg-light);
+    border: 1px solid var(--color-bg-card);
+    border-radius: var(--radius-md);
+    color: var(--color-text);
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: var(--color-bg);
+        flex-direction: column;
+        padding: var(--space-md);
+        gap: var(--space-sm);
+        transform: translateY(-150%);
+        opacity: 0;
+        transition: var(--transition);
+    }
+    
+    .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+    .nav-toggle {
+        display: flex;
+    }
+    
+    .service-times {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .service {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .footer-content {
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
