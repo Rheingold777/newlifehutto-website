@@ -46,3 +46,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Floating Action Button
+const fabButton = document.getElementById('fabButton');
+const fabMenu = document.getElementById('fabMenu');
+
+if (fabButton && fabMenu) {
+    fabButton.addEventListener('click', function() {
+        fabMenu.classList.toggle('active');
+        // Rotate the plus icon
+        if (fabMenu.classList.contains('active')) {
+            fabButton.style.transform = 'rotate(45deg)';
+        } else {
+            fabButton.style.transform = 'rotate(0deg)';
+        }
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!fabButton.contains(e.target) && !fabMenu.contains(e.target)) {
+            fabMenu.classList.remove('active');
+            fabButton.style.transform = 'rotate(0deg)';
+        }
+    });
+}

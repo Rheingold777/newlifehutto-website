@@ -63,9 +63,9 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: var(--space-sm);
 }
 
-h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
-h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
-h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700; }
+h2 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; }
+h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
 
 p {
     margin-bottom: var(--space-sm);
@@ -163,8 +163,14 @@ img {
 }
 
 .nav-logo img {
-    height: 50px;
+    height: 60px;
     width: auto;
+}
+
+@media (min-width: 769px) {
+    .nav-logo img {
+        height: 70px;
+    }
 }
 
 .nav-menu {
@@ -432,7 +438,7 @@ img {
 }
 
 .footer-logo {
-    height: 60px;
+    height: 80px;
     width: auto;
     margin-bottom: var(--space-sm);
 }
@@ -470,12 +476,105 @@ img {
 }
 
 .social-links a {
-    font-size: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-full);
     transition: var(--transition);
 }
 
 .social-links a:hover {
-    transform: scale(1.2);
+    background-color: var(--color-primary);
+    transform: translateY(-3px);
+}
+
+.social-links a svg {
+    width: 22px;
+    height: 22px;
+    fill: var(--color-text);
+    transition: var(--transition);
+}
+
+.social-links a:hover svg {
+    fill: var(--color-black);
+}
+
+/* Floating Action Button */
+.fab {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+}
+
+.fab-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-primary);
+    border-radius: var(--radius-full);
+    box-shadow: 0 4px 20px rgba(232, 184, 109, 0.4);
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+}
+
+.fab-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(232, 184, 109, 0.5);
+}
+
+.fab-button svg {
+    width: 28px;
+    height: 28px;
+    fill: var(--color-black);
+}
+
+.fab-menu {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-lg);
+    padding: var(--space-sm);
+    min-width: 200px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition);
+}
+
+.fab-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.fab-menu a {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: 0.75rem 1rem;
+    color: var(--color-text);
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+}
+
+.fab-menu a:hover {
+    background-color: var(--color-bg-light);
+    color: var(--color-primary);
+}
+
+.fab-menu svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
 }
 
 .footer-bottom {
