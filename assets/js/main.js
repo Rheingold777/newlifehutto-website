@@ -1,43 +1,85 @@
-// New Life Hutto - Main JavaScript
+// New Life Hutto - Main JavaScript v2
 
-// Mobile Navigation Toggle
 document.addEventListener('DOMContentLoaded', function() {
+
+    // ========================================
+    // Mobile Navigation Toggle
+    // ========================================
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
-    
+
     if (navToggle && navMenu) {
         navToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
             navToggle.classList.toggle('active');
         });
-        
+
         // Close menu when clicking a link
-        navMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
+        navMenu.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
                 navMenu.classList.remove('active');
                 navToggle.classList.remove('active');
             });
         });
     }
-    
-    // Keep the navbar consistent with the current light site design.
-    const navbar = document.querySelector('.navbar');
+
+    // ========================================
+    // Navbar: transparent → solid on scroll
+    // ========================================
+    var navbar = document.getElementById('mainNav');
     if (navbar) {
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
-                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+        var isTransparent = navbar.classList.contains('navbar--transparent');
+
+        function handleNavScroll() {
+            if (window.scrollY > 80) {
+                navbar.classList.add('navbar--scrolled');
             } else {
-                navbar.style.backgroundColor = '#ffffff';
+                navbar.classList.remove('navbar--scrolled');
             }
+        }
+
+        if (isTransparent) {
+            window.addEventListener('scroll', handleNavScroll, { passive: true });
+            handleNavScroll(); // run once on load
+        }
+    }
+
+    // ========================================
+    // Scroll-triggered fade-in animations
+    // ========================================
+    var fadeElements = document.querySelectorAll('.fade-in');
+    if (fadeElements.length > 0 && 'IntersectionObserver' in window) {
+        var fadeObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    fadeObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        fadeElements.forEach(function(el) {
+            fadeObserver.observe(el);
+        });
+    } else {
+        // Fallback: show all immediately
+        fadeElements.forEach(function(el) {
+            el.classList.add('visible');
         });
     }
+
 });
 
+// ========================================
 // Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+// ========================================
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        var target = document.querySelector(this.getAttribute('href'));
         if (target) {
             target.scrollIntoView({
                 behavior: 'smooth',
@@ -46,27 +88,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-
-// Floating Action Button
-const fabButton = document.getElementById('fabButton');
-const fabMenu = document.getElementById('fabMenu');
-
-if (fabButton && fabMenu) {
-    fabButton.addEventListener('click', function() {
-        fabMenu.classList.toggle('active');
-        // Rotate the plus icon
-        if (fabMenu.classList.contains('active')) {
-            fabButton.style.transform = 'rotate(45deg)';
-        } else {
-            fabButton.style.transform = 'rotate(0deg)';
-        }
-    });
-    
-    // Close menu when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!fabButton.contains(e.target) && !fabMenu.contains(e.target)) {
-            fabMenu.classList.remove('active');
-            fabButton.style.transform = 'rotate(0deg)';
-        }
-    });
-}

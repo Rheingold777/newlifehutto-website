@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apostolic Pentecostal Church in Hutto, TX | New Life Hutto</title>
-    <meta name="description" content="Apostolic Pentecostal church serving Hutto, Round Rock, and Pflugerville. Bilingual Sunday Worship 11 AM, Tuesday Bible Study 7 PM. 623 W Front St, Hutto TX. (512) 866-8455.">
+    <meta name="description" content="Apostolic Pentecostal church serving Hutto, Round Rock & Pflugerville. Bilingual Sunday Worship 11 AM, Tuesday Bible Study 7 PM. 623 W Front St, Hutto TX.">
     <link rel="canonical" href="https://newlifehutto.com/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Apostolic Pentecostal Church in Hutto, TX | New Life Hutto">
@@ -34,8 +34,8 @@
         "religiousDenomination": "United Pentecostal Church International",
         "availableLanguage": ["English", "Spanish"],
         "sameAs": [
-            "https://facebook.com/newlifehutto",
-            "https://instagram.com/newlifehutto",
+            "https://www.facebook.com/newlifehutto",
+            "https://www.instagram.com/newlifehutto",
             "https://www.youtube.com/channel/UCI8IODETqN8oBrFvL2BFpBA"
         ],
         "openingHoursSpecification": [
@@ -70,18 +70,18 @@
     </script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- Navigation - Transparent over hero -->
+    <nav class="navbar navbar--transparent" id="mainNav">
         <div class="nav-container">
             <a href="/" class="nav-logo">
                 <img src="assets/images/logo.png" alt="New Life Hutto" width="500" height="500">
             </a>
-            <button class="nav-toggle" aria-label="Toggle navigation">
+            <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="/about">About</a></li>
                 <li><a href="/visit">Visit</a></li>
                 <li><a href="/prayer">Prayer</a></li>
@@ -91,13 +91,14 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Full Viewport with Worship Photo -->
     <section class="hero">
+        <div class="hero-bg" style="background-image: url('assets/images/worship-keyboard.jpg');"></div>
         <div class="hero-content">
             <p class="hero-tagline">Welcome Home</p>
-            <h1>Apostolic Pentecostal Church Serving Hutto, Round Rock, and Pflugerville</h1>
-            <p class="subtitle">A Perfect Place for Imperfect People</p>
-            
+            <h1>A Perfect Place for Imperfect People</h1>
+            <p class="subtitle">Spirit-filled worship in Hutto, TX</p>
+
             <div class="service-box">
                 <h3>Join Us This Week</h3>
                 <div class="service-times">
@@ -113,20 +114,29 @@
                     </div>
                 </div>
             </div>
-            
-            <a href="/visit" class="btn btn-primary">Plan Your Visit</a>
+
+            <div class="hero-buttons">
+                <a href="/visit" class="btn btn-primary">Plan Your Visit</a>
+                <a href="/about" class="btn btn-light">Learn More</a>
+            </div>
+        </div>
+
+        <div class="hero-scroll" aria-hidden="true">
+            <span>Scroll</span>
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
         </div>
     </section>
 
     <!-- Welcome Section -->
-    <section class="section section-alt">
+    <section class="section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header fade-in">
+                <span class="section-label">Welcome</span>
                 <h2>You Belong Here</h2>
-                <p>At New Life Hutto, we're more than just a gathering. We're a family. Whether you're exploring faith for the first time or looking for a church to call home, there's a place for you.</p>
+                <p>Whether you're exploring faith for the first time or looking for a church to call home, you'll find a welcoming family at New Life Hutto.</p>
             </div>
-            
-            <div class="features">
+
+            <div class="features fade-in">
                 <div class="feature">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -135,7 +145,7 @@
                         </svg>
                     </div>
                     <h3>Spirit-Filled Worship</h3>
-                    <p>Experience authentic, heartfelt worship in the presence of God.</p>
+                    <p>Experience authentic, heartfelt worship in the presence of God. Our services are passionate, Spirit-led, and open to everyone.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">
@@ -144,7 +154,7 @@
                         </svg>
                     </div>
                     <h3>Biblical Teaching</h3>
-                    <p>Grounded in Apostolic truth, relevant for everyday life.</p>
+                    <p>Grounded in Apostolic truth and relevant for everyday life. We teach the whole counsel of God with clarity and conviction.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">
@@ -153,7 +163,33 @@
                         </svg>
                     </div>
                     <h3>Genuine Community</h3>
-                    <p>A welcoming family where you can grow and belong.</p>
+                    <p>More than a congregation, we're a family. Find real friendships and a place where you can grow and belong.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Life Moments - Photo Grid -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Life at New Life</span>
+                <h2>See What God Is Doing</h2>
+                <p>Lives are being changed every week. From baptisms to breakthroughs, God is moving at New Life Hutto.</p>
+            </div>
+
+            <div class="photo-grid fade-in">
+                <div class="photo-grid-item">
+                    <img src="assets/images/baptism-indoor.jpg" alt="Baptism service at New Life Hutto church" width="800" height="600" loading="lazy">
+                    <div class="photo-caption">Baptism in Jesus' Name</div>
+                </div>
+                <div class="photo-grid-item">
+                    <img src="assets/images/testimony-cancerfree.jpg" alt="Child celebrating being cancer free at New Life Hutto" width="800" height="600" loading="lazy">
+                    <div class="photo-caption">God Heals</div>
+                </div>
+                <div class="photo-grid-item">
+                    <img src="assets/images/prayer-youth.jpg" alt="Youth praying together at New Life Hutto church" width="800" height="600" loading="lazy">
+                    <div class="photo-caption">Youth Prayer</div>
                 </div>
             </div>
         </div>
@@ -169,31 +205,52 @@
         </div>
     </section>
 
-    <!-- Prayer Section -->
+    <!-- Story Card - Baptism Testimony -->
     <section class="section">
         <div class="container">
-            <div class="section-header">
-                <h2>Need Prayer?</h2>
-                <p>Prayer is the foundation of everything we do. Whatever you're facing, we want to stand with you in faith.</p>
+            <div class="story-card fade-in">
+                <div class="story-card-image">
+                    <img src="assets/images/baptism-woman.jpg" alt="Woman being baptized in Jesus name at New Life Hutto" width="800" height="600" loading="lazy">
+                </div>
+                <div class="story-card-content">
+                    <span class="section-label">New Beginnings</span>
+                    <h2>Experience the Power of God</h2>
+                    <p>At New Life Hutto, we believe in the full Apostolic experience: repentance, baptism in Jesus' name, and receiving the gift of the Holy Ghost (Acts 2:38).</p>
+                    <p>Every week, people encounter God's presence in a real and powerful way. Whether you're seeking answers, healing, or purpose, there's room for you here.</p>
+                    <a href="/beliefs" class="btn btn-outline mt-md">What We Believe</a>
+                </div>
             </div>
-            <div style="text-align: center;">
-                <a href="/prayer" class="btn btn-outline">Submit a Prayer Request</a>
-            </div>
+        </div>
+    </section>
+
+    <!-- Prayer CTA - Photo Background -->
+    <section class="photo-banner" style="background-image: url('assets/images/prayer-youth.jpg');">
+        <div class="container" style="text-align: center;">
+            <span class="section-label" style="color: var(--color-accent);">We're Here for You</span>
+            <h2 style="color: #fff;">Need Prayer?</h2>
+            <p style="max-width: 550px; margin: 0 auto var(--space-md); color: rgba(255,255,255,0.85);">Prayer is the foundation of everything we do. Whatever you're going through, we want to stand with you in faith. Submit a request and our prayer team will lift you up.</p>
+            <a href="/prayer" class="btn btn-white">Submit a Prayer Request</a>
         </div>
     </section>
 
     <!-- Location Section -->
     <section class="section section-alt">
         <div class="container">
-            <div class="section-header">
-                <h2>Find Us</h2>
+            <div class="section-header fade-in">
+                <span class="section-label">Visit Us</span>
+                <h2>Find Us in Hutto</h2>
+                <p>We're located in the heart of Hutto, just minutes from Round Rock and Pflugerville.</p>
             </div>
-            <div class="location-box">
+            <div class="location-box fade-in">
                 <p class="address">
                     623 West Front Street, Suite 1800<br>
                     Hutto, TX 78634
                 </p>
-                <a href="https://maps.google.com/?q=623+West+Front+Street+Suite+1800+Hutto+TX+78634" class="btn btn-light" target="_blank" rel="noopener noreferrer">Get Directions</a>
+                <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: var(--space-md);">Sundays 11:00 AM &middot; Tuesdays 7:00 PM</p>
+                <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
+                    <a href="https://maps.google.com/?q=623+West+Front+Street+Suite+1800+Hutto+TX+78634" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Get Directions</a>
+                    <a href="/visit" class="btn btn-outline">Plan Your Visit</a>
+                </div>
             </div>
         </div>
     </section>
@@ -204,7 +261,7 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <img src="assets/images/logo.png" alt="New Life Hutto" class="footer-logo" width="500" height="500" loading="lazy">
-                    <p>A Spirit-filled Apostolic church affiliated with the United Pentecostal Church International.</p>
+                    <p>A Spirit-filled Apostolic church affiliated with the United Pentecostal Church International. Serving Hutto, Round Rock, and Pflugerville, TX.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
@@ -221,10 +278,10 @@
                 <div class="footer-info">
                     <h4>Connect</h4>
                     <div class="social-links">
-                        <a href="https://facebook.com/newlifehutto" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <a href="https://www.facebook.com/newlifehutto" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                             <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                         </a>
-                        <a href="https://instagram.com/newlifehutto" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <a href="https://www.instagram.com/newlifehutto" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                             <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                         </a>
                         <a href="https://www.youtube.com/channel/UCI8IODETqN8oBrFvL2BFpBA" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
