@@ -434,6 +434,12 @@ img {
     color: rgba(255, 255, 255, 0.7);
 }
 
+/* Service box on light backgrounds (subpages) */
+.section .service-box {
+    background: var(--color-navy);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .hero-buttons {
     display: flex;
     gap: var(--space-sm);
