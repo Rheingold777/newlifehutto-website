@@ -22,6 +22,35 @@
     <link rel="stylesheet" href="assets/css/style.css?v=4">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <style>
+      /* Visit page enhancements */
+      .visit-hero { position: relative; min-height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: calc(var(--space-xl) + 80px) var(--space-md) var(--space-xl); background-size: cover; background-position: center; overflow: hidden; }
+      .visit-hero::before { content:''; position:absolute; inset:0; background: linear-gradient(180deg, rgba(15,23,42,0.55) 0%, rgba(15,23,42,0.85) 100%); }
+      .visit-hero-content { position: relative; z-index: 2; max-width: 720px; color: #fff; }
+      .visit-hero .kicker { color: var(--color-accent); font-size: 0.85rem; letter-spacing: 4px; text-transform: uppercase; font-weight: 600; }
+      .visit-hero h1 { color: #fff; font-size: clamp(2.5rem, 5vw, 4rem); margin: var(--space-sm) 0; line-height: 1.05; }
+      .visit-hero p.lead { color: rgba(255,255,255,0.9); font-size: 1.25rem; max-width: 560px; margin: 0 auto var(--space-md); }
+      .visit-hero .pills { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: var(--space-md); }
+      .visit-hero .pill { background: rgba(255,255,255,0.12); border: 1px solid rgba(200,162,110,0.4); color: #fff; padding: 8px 16px; border-radius: var(--radius-full); font-size: 0.9rem; font-weight: 500; backdrop-filter: blur(6px); }
+      .visit-hero .pill strong { color: var(--color-accent); }
+
+      .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-md); margin-top: var(--space-lg); }
+      @media (max-width: 800px) { .steps { grid-template-columns: 1fr; } }
+      .step { position: relative; padding: var(--space-md); background: #fff; border-radius: var(--radius-md); border: 1px solid var(--color-border); transition: var(--transition); }
+      .step:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(15,23,42,0.08); border-color: var(--color-accent); }
+      .step-num { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: var(--color-navy); color: var(--color-accent); font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700; border-radius: 50%; margin-bottom: var(--space-sm); }
+      .step h3 { font-size: 1.15rem; color: var(--color-navy); margin-bottom: 6px; }
+      .step p { color: var(--color-text-light); font-size: 0.95rem; line-height: 1.55; }
+
+      .practical-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); margin-top: var(--space-md); }
+      @media (max-width: 800px) { .practical-grid { grid-template-columns: 1fr; } }
+      .practical-card { padding: var(--space-md); background: var(--color-bg-warm); border-radius: var(--radius-md); border-top: 3px solid var(--color-accent); }
+      .practical-card h3 { color: var(--color-navy); font-size: 1.2rem; margin-bottom: var(--space-xs); display: flex; align-items: center; gap: 10px; }
+      .practical-card h3 svg { width: 24px; height: 24px; color: var(--color-accent); }
+      .practical-card p { color: var(--color-text-light); font-size: 0.97rem; line-height: 1.6; }
+
+      .family-banner { background-image: url('assets/images/prayer-youth.jpg'); }
+    </style>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -65,6 +94,7 @@
                 <span></span>
             </button>
             <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/visit">Visit</a></li>
                 <li><a href="/prayer">Prayer</a></li>
@@ -74,11 +104,17 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
+    <!-- Visit Hero -->
+    <section class="visit-hero" style="background-image: url('assets/images/worship-keyboard.jpg');">
+        <div class="visit-hero-content">
+            <div class="kicker">We Can't Wait to Meet You</div>
             <h1>Plan Your Visit</h1>
-            <p>We can't wait to meet you</p>
+            <p class="lead">Whether it's your first time in any church or you've been searching for a new home — there's a seat saved for you.</p>
+            <div class="pills">
+                <span class="pill"><strong>Sundays</strong> 11:00 AM</span>
+                <span class="pill"><strong>Tuesdays</strong> 7:00 PM</span>
+                <span class="pill">623 W Front St, Hutto</span>
+            </div>
         </div>
     </section>
 
@@ -98,6 +134,74 @@
                         <span class="time">7:00 PM</span>
                         <span class="type">Bible Study</span>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Your First Sunday timeline -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Your First Sunday</h2>
+                <p>Here's exactly what happens from the moment you pull in. No surprises.</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <h3>Pull Up &amp; Park</h3>
+                    <p>Free parking right out front. Look for the New Life Hutto sign at Suite 1800.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <h3>Get Greeted</h3>
+                    <p>Someone will meet you at the door, point you to coffee, and answer any questions.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <h3>Worship Together</h3>
+                    <p>Service runs about 90 minutes — Spirit-filled worship, then a Bible-based message you can actually use.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">4</div>
+                    <h3>Stick Around</h3>
+                    <p>We love to hang out after. Grab a snack, meet the pastor, ask anything. No pressure, no signup.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practical Info -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Good to Know</h2>
+                <p>The practical stuff so you can walk in relaxed.</p>
+            </div>
+            <div class="practical-grid">
+                <div class="practical-card">
+                    <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0H15m0 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0M3 6.75h13.5M3 12h12m-3.75 6h-7.5a1.5 1.5 0 0 1-1.5-1.5V6a1.5 1.5 0 0 1 1.5-1.5h12.379a1.5 1.5 0 0 1 1.06.44L18 7.5h2.25a1.5 1.5 0 0 1 1.5 1.5v7.5a1.5 1.5 0 0 1-1.5 1.5h-.75"/></svg> Parking</h3>
+                    <p>Free, on-site, plenty of spaces. No parking lot stress on your first visit.</p>
+                </div>
+                <div class="practical-card">
+                    <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/></svg> The Building</h3>
+                    <p>We're in a renovated suite — clean, climate-controlled, wheelchair accessible. Restrooms on-site.</p>
+                </div>
+                <div class="practical-card">
+                    <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 0 1-1.125-1.125M3.375 19.5h7.5c.621 0 1.125-.504 1.125-1.125m-9.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-7.5A1.125 1.125 0 0 1 12 18.375m9.75-12.75c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125m19.5 0v1.5c0 .621-.504 1.125-1.125 1.125M2.25 5.625v1.5c0 .621.504 1.125 1.125 1.125m0 0h17.25m-17.25 0h7.5c.621 0 1.125.504 1.125 1.125M3.375 8.25c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125m17.25-3.75h-7.5c-.621 0-1.125.504-1.125 1.125m8.625-1.125c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125M12 10.875v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 10.875c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125M13.125 12h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125M20.625 12c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5M12 14.625v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 14.625c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125m0 1.5v-1.5m0 0c0-.621.504-1.125 1.125-1.125m0 0h7.5"/></svg> Coffee &amp; Snacks</h3>
+                    <p>Fresh coffee, water, and a snack table before and after service. Help yourself.</p>
+                </div>
+                <div class="practical-card">
+                    <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 21 5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 0 1 6-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 0 1-3.827-5.802"/></svg> Bilingual</h3>
+                    <p>Sunday services include Spanish translation. Tuesday Bible Study runs in English with help available.</p>
+                </div>
+                <div class="practical-card">
+                    <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 0 0-1.883 2.542l.857 6a2.25 2.25 0 0 0 2.227 1.932H19.05a2.25 2.25 0 0 0 2.227-1.932l.857-6a2.25 2.25 0 0 0-1.883-2.542m-16.5 0V6A2.25 2.25 0 0 1 6 3.75h3.879a1.5 1.5 0 0 1 1.06.44l2.122 2.12a1.5 1.5 0 0 0 1.06.44H18A2.25 2.25 0 0 1 20.25 9v.776"/></svg> Kids Welcome</h3>
+                    <p>We love wiggle and noise. Kids stay with you in service — no separate program required. Family room available if needed.</p>
+                </div>
+                <div class="practical-card">
+                    <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.25V18a2.25 2.25 0 0 0 2.25 2.25h13.5A2.25 2.25 0 0 0 21 18V8.25m-18 0V6a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6ZM7.5 6h.008v.008H7.5V6Zm2.25 0h.008v.008H9.75V6Z"/></svg> What to Wear</h3>
+                    <p>Anything you're comfortable in. Jeans, dress, suit, t-shirt — all welcome. Bernhard usually wears a button-down.</p>
                 </div>
             </div>
         </div>
@@ -150,18 +254,28 @@
         </div>
     </section>
 
+    <!-- Family Banner -->
+    <section class="photo-banner family-banner">
+        <div class="container" style="text-align: center;">
+            <h2>Bring the Whole Family</h2>
+            <p style="max-width: 600px; margin: 0 auto var(--space-md);">Our kids worship right alongside their parents — we believe families belong together. Grandma's coming? We'll save her the comfy chair.</p>
+            <a href="/prayer" class="btn btn-white">Ask Us Anything</a>
+        </div>
+    </section>
+
     <!-- Location -->
     <section class="section">
         <div class="container">
             <div class="section-header">
-                <h2>Location</h2>
+                <h2>Find Us</h2>
+                <p>We're tucked into a quiet business park &mdash; quick on, quick off, no traffic to fight.</p>
             </div>
             <div class="location-box">
                 <p class="address">
                     623 West Front Street, Suite 1800<br>
                     Hutto, TX 78634
                 </p>
-                <p style="color: var(--color-text-muted); margin-bottom: var(--space-md);">Located in historic downtown Hutto</p>
+                <p style="color: var(--color-text-muted); margin-bottom: var(--space-md);">Easy to find &middot; Free parking on-site &middot; Wheelchair accessible</p>
                 <a href="https://maps.google.com/?q=623+West+Front+Street+Suite+1800+Hutto+TX+78634" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Get Directions</a>
             </div>
             <div style="margin-top: var(--space-lg); max-width: 700px; margin-left: auto; margin-right: auto;">
