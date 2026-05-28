@@ -1,1 +1,7 @@
+# Ghost URL recovery: 301 old Squarespace paths to their current equivalents
+# Recovers link equity from URLs still indexed by Google after migration.
+/new-here   /what-to-expect   301
+/about-us   /about            301
+
+# Canonical: www → apex
 https://www.newlifehutto.com/* https://newlifehutto.com/:splat 301
