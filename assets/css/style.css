@@ -242,14 +242,21 @@ img {
 .nav-logo img {
     height: 55px;
     width: auto;
+    /* Source PNG is white-on-transparent; on default white navbar we
+       need the logo to read as dark navy. Filter recipe turns the
+       white silhouette into navy #0f172a so it's visible everywhere. */
+    filter: brightness(0) saturate(100%) invert(8%) sepia(33%) saturate(2964%) hue-rotate(208deg) brightness(94%) contrast(102%);
+    transition: filter 0.3s ease;
 }
 
 .navbar--transparent .nav-logo img {
+    /* Over dark homepage hero: keep the logo white */
     filter: brightness(0) invert(1);
 }
 
 .navbar--scrolled .nav-logo img {
-    filter: none !important;
+    /* When transparent navbar scrolls into solid state, snap back to navy */
+    filter: brightness(0) saturate(100%) invert(8%) sepia(33%) saturate(2964%) hue-rotate(208deg) brightness(94%) contrast(102%) !important;
 }
 
 .nav-menu {
