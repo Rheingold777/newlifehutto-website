@@ -57,13 +57,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         }, {
-            threshold: 0.15,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0.01,
+            rootMargin: '0px 0px 100px 0px'
         });
 
         fadeElements.forEach(function(el) {
             fadeObserver.observe(el);
         });
+
+        // Safety net: anything still hidden after 1.5s force-shows
+        setTimeout(function() {
+            fadeElements.forEach(function(el) {
+                if (!el.classList.contains('visible')) {
+                    el.classList.add('visible');
+                }
+            });
+        }, 1500);
     } else {
         // Fallback: show all immediately
         fadeElements.forEach(function(el) {
