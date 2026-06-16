@@ -61,6 +61,17 @@
     <link rel="stylesheet" href="assets/css/style.css?v=5">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <style>
+      /* Homepage review strip */
+      .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); margin-top: var(--space-lg); }
+      @media (max-width: 900px) { .reviews-grid { grid-template-columns: 1fr; } }
+      .review-card { background: #fff; border-radius: var(--radius-md, 12px); padding: var(--space-md); border: 1px solid var(--color-border, #e5e7eb); box-shadow: 0 6px 18px rgba(15,23,42,0.05); display: flex; flex-direction: column; text-align: left; }
+      .review-stars { color: #e0a23a; font-size: 1rem; letter-spacing: 2px; margin-bottom: var(--space-xs); }
+      .review-quote { color: var(--color-text, #0f172a); font-size: 1.02rem; line-height: 1.6; flex: 1; }
+      .review-meta { margin-top: var(--space-sm); font-size: 0.9rem; color: var(--color-navy, #0f172a); font-weight: 700; }
+      .review-source { font-weight: 400; color: var(--color-text-muted, #64748b); }
+      .nav-phone { font-weight: 600; }
+    </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6QGPDMK9RN"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -87,6 +98,7 @@
                 <li><a href="/visit">Visit</a></li>
                 <li><a href="/prayer">Prayer</a></li>
                 <li><a href="/give">Give</a></li>
+                <li><a href="tel:+15128668455" class="nav-phone">(512) 866-8455</a></li>
                 <li><a href="/visit" class="btn btn-primary">Plan Your Visit</a></li>
             </ul>
         </div>
@@ -120,6 +132,7 @@
                 <a href="/visit" class="btn btn-primary">Plan Your Visit</a>
                 <a href="/about" class="btn btn-light">Learn More</a>
             </div>
+            <p class="hero-phone" style="margin-top: var(--space-md); color: rgba(255,255,255,0.9);">Questions? Call or text <a href="tel:+15128668455" style="color:#fff; font-weight:600; text-decoration: underline;">(512)&nbsp;866-8455</a></p>
         </div>
 
         <div class="hero-scroll" aria-hidden="true">
@@ -136,6 +149,48 @@
                 <p>At New Life Hutto, everybody knows your name. We're not trying to be the biggest church in town — we're trying to be a family. A place where you actually belong, not just attend.</p>
                 <p>We worship hard, pray for each other by name, and believe God still moves the same way He did in the book of Acts. If that sounds like what you've been looking for, come see for yourself.</p>
                 <a href="/about" class="btn btn-outline mt-md">More About Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews / social proof -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>What People Are Saying</h2>
+                <p>Real words from our church family and first-time visitors.</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card fade-in">
+                    <div class="review-quote">"From the moment I walked into the doors I felt nothing but LOVE. New Life Church will always have a special place in my heart."</div>
+                    <div class="review-meta">Jimmy Coliadis <span class="review-source">· Facebook</span></div>
+                </div>
+                <div class="review-card fade-in">
+                    <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <div class="review-quote">"Warm and welcoming! Great preaching and teaching, plus an awesome worship team."</div>
+                    <div class="review-meta">Dawn Morris <span class="review-source">· Google</span></div>
+                </div>
+                <div class="review-card fade-in">
+                    <div class="review-quote">"No matter your past, your problems, tattooed, young, old, lost, unsure — you are welcomed here. You are not alone. The people are awesome!"</div>
+                    <div class="review-meta">Peggy Gonzalez <span class="review-source">· Facebook</span></div>
+                </div>
+                <div class="review-card fade-in">
+                    <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <div class="review-quote">"Lovely congregation and pastor family. Very welcoming — we were quickly included in conversation and fellowship. Great presence of God!"</div>
+                    <div class="review-meta">Aaron Cain <span class="review-source">· Google</span></div>
+                </div>
+                <div class="review-card fade-in">
+                    <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <div class="review-quote">"Wonderful place to feel the love of God with a diverse congregation."</div>
+                    <div class="review-meta">Gariesh Martin <span class="review-source">· Google</span></div>
+                </div>
+                <div class="review-card fade-in">
+                    <div class="review-quote">"Great place for the entire family to learn about the greatness of God!"</div>
+                    <div class="review-meta">Tia Taylor <span class="review-source">· Facebook</span></div>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top: var(--space-lg);">
+                <a href="/visit" class="btn btn-primary">Plan Your Visit</a>
             </div>
         </div>
     </section>
@@ -186,7 +241,8 @@
                     623 West Front Street, Suite 1800<br>
                     Hutto, TX 78634
                 </p>
-                <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: var(--space-md);">Sundays 11:00 AM &middot; Tuesdays 7:00 PM</p>
+                <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: var(--space-xs);">Sundays 11:00 AM &middot; Tuesdays 7:00 PM</p>
+                <p style="font-size: 0.95rem; margin-bottom: var(--space-md);">Questions? Call or text <a href="tel:+15128668455" style="font-weight:600;">(512)&nbsp;866-8455</a></p>
                 <a href="https://maps.google.com/?q=623+West+Front+Street+Suite+1800+Hutto+TX+78634" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Get Directions</a>
             </div>
         </div>
@@ -229,6 +285,7 @@
                     <p>Sundays at 11:00 AM</p>
                     <p>Tuesdays at 7:00 PM</p>
                     <p style="margin-top: var(--space-sm);">623 W Front St, Suite 1800<br>Hutto, TX 78634</p>
+                    <p style="margin-top: var(--space-sm);"><a href="tel:+15128668455" style="color: inherit;">(512) 866-8455</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
