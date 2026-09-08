@@ -1,0 +1,55 @@
+{
+  "project": "newlifehutto",
+  "compatibilityDate": "2026-03-20",
+  "releaseState": "Local release candidate; not deployed",
+  "productionBaseline": {
+    "deploymentId": "75e07616-2695-48d0-80df-ff71bcdb16b4",
+    "publishedAt": "2026-09-08T04:36:04.988377Z",
+    "archiveSha256": "43a4e28645c5dcf3730aaedcbe2d457c986e7007f5d75f645714ab077f9b8db4",
+    "runtime": "Static Cloudflare Pages; no Functions in verified v4 deployment",
+    "priorDeploymentId": "8b905566-1136-4cf3-b2f9-118788eabfb6",
+    "archiveName": "website-publish-v4.zip",
+    "archiveCustody": "Church-controlled recovery backup; not stored in this public repository."
+  },
+  "sourceConstraint": "Build the reconciled site/ directory with scripts/package-cloudflare.py. Deploy only the generated deploy/ directory; never the repository root or bare site/.",
+  "pageLastModified": {
+    "/": "2026-09-08",
+    "/about/": "2026-09-08",
+    "/visit/": "2026-09-08",
+    "/prayer/": "2026-09-08",
+    "/give/": "2026-09-08",
+    "/contact/": "2026-09-08",
+    "/beliefs/": "2026-09-08",
+    "/pastor/": "2026-09-08",
+    "/blog/fuel-fasting/": "2026-09-08",
+    "/what-to-expect/": "2026-09-08",
+    "/round-rock/": "2026-09-08",
+    "/pflugerville/": "2026-09-08",
+    "/taylor/": "2026-09-08",
+    "/georgetown/": "2026-09-08"
+  },
+  "lastModifiedPolicy": "All 14 pages received meaningful address/navigation/footer reconciliation on September 8, 2026, confirmed by the website implementation task. Dates are explicit content-change dates, never filesystem or packaging timestamps.",
+  "verifiedProject": {
+    "verificationMethod": "Read-only Cloudflare project inspection, September 8, 2026; refresh before release.",
+    "project": "newlifehutto",
+    "productionBranch": "main",
+    "source": null,
+    "deploymentMethod": "Direct Upload; ad_hoc production deployment",
+    "canonicalProductionDeploymentId": "75e07616-2695-48d0-80df-ff71bcdb16b4",
+    "canonicalProductionDeploymentStatus": "success",
+    "canonicalProductionDeploymentCreatedAt": "2026-09-08T04:36:04.988377Z",
+    "productionCompatibilityDate": "2026-03-20",
+    "productionCompatibilityFlags": [],
+    "productionUsageModel": "standard",
+    "productionFailOpen": true,
+    "functionsLimits": null,
+    "functionsLimitsMeaning": "Not returned by project GET; remaining allowance is not established",
+    "accountChangesMade": false
+  },
+  "releaseConsideration": "All requests use the routing Worker. Production fail_open is true; exhaustion could bypass host/slash/legacy handling and public HTML mapping. A September 8 account-dashboard review established adequate current headroom. Monitor shared usage and retain tested rollback. No paid plan or account settings change is included.",
+  "accountUsageCheck": {
+    "checkedDate": "2026-09-08",
+    "source": "Read-only Cloudflare account dashboard; detailed usage evidence retained privately.",
+    "assessment": "Adequate current headroom; the allowance is shared and can change. No account settings changed."
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "release": "Approved September 8, 2026 candidate",
+  "files": [
+    {
+      "bytes": 803,
+      "path": "404.html",
+      "sha256": "82e84d95c1958cc011f42e4c2fcbdefbeb3b6d6a39f33caa6e18d21fdebe9e55"
+    },
+    {
+      "bytes": 8668,
+      "path": "_nlh-pages/about.page",
+      "sha256": "ca918ff83311dc1c5799dbdbc476989e758dc10871260301ea1fc9f422805f65"
+    },
+    {
+      "bytes": 11515,
+      "path": "_nlh-pages/beliefs.page",
+      "sha256": "528baf916229e7b8da467a6493d14a3dac00b0a5f6dfee35e6ea796834c9366e"
+    },
+    {
+      "bytes": 17917,
+      "path": "_nlh-pages/blog--fuel-fasting.page",
+      "sha256": "6408038df8e9e722506a64aac5428c57ddce168a09cca49b563bf3e0ab307c1d"
+    },
+    {
+      "bytes": 16212,
+      "path": "_nlh-pages/contact.page",
+      "sha256": "c8dbd529b33d470d7b668d258ed491b3233da65d145f6258d5a2401970f648ae"
+    },
+    {
+      "bytes": 13027,
+      "path": "_nlh-pages/georgetown.page",
+      "sha256": "13b29cfa0a238ce796ad07ff7f6adf92ee3fc7fa860008080f39831c25e44586"
+    },
+    {
+      "bytes": 11865,
+      "path": "_nlh-pages/give.page",
+      "sha256": "70e73f7645602e677198403e142f49c6b2ceddcd9f120e614553686b92c3f92f"
+    },
+    {
+      "bytes": 13380,
+      "path": "_nlh-pages/home.page",
+      "sha256": "4dfcecab22f32f35c1c2fb64d0b4066ac598e55ef4fdba539964b9450d0437a4"
+    },
+    {
+      "bytes": 803,
+      "path": "_nlh-pages/not-found.page",
+      "sha256": "82e84d95c1958cc011f42e4c2fcbdefbeb3b6d6a39f33caa6e18d21fdebe9e55"
+    },
+    {
+      "bytes": 11047,
+      "path": "_nlh-pages/pastor.page",
+      "sha256": "b04390209dd8295f794ce5fd2374f614a4a70133721895a39ff9dbb98517c028"
+    },
+    {
+      "bytes": 13763,
+      "path": "_nlh-pages/pflugerville.page",
+      "sha256": "ffdc75b00c7c7841ebb9cf2e6019fa54bca3e5944e8dab57f02e2387d2e2eea4"
+    },
+    {
+      "bytes": 9611,
+      "path": "_nlh-pages/prayer.page",
+      "sha256": "f851232179de157be519f037b7c50ecad6a7fc856718be35b7dc6e5cc6c47564"
+    },
+    {
+      "bytes": 14594,
+      "path": "_nlh-pages/round-rock.page",
+      "sha256": "19d0c32727331a19e8602ea11566a6885f16a22496a2a4a62d4cf8d9a87b9fe1"
+    },
+    {
+      "bytes": 12859,
+      "path": "_nlh-pages/taylor.page",
+      "sha256": "fee77ad3c2ebf912f91d98366259d8060d0507cd3bde81d089d85bcb26304110"
+    },
+    {
+      "bytes": 14009,
+      "path": "_nlh-pages/visit.page",
+      "sha256": "466e4ca3e328c98946143f563f46760a9aefeeb236fb16eb23c6149a4ec4cdf0"
+    },
+    {
+      "bytes": 13112,
+      "path": "_nlh-pages/what-to-expect.page",
+      "sha256": "0205b24500b82dbeb8ccb734efa06d795ad0c21cd3a0caaeaeada62e2663d756"
+    },
+    {
+      "bytes": 65,
+      "path": "_routes.json",
+      "sha256": "4d2faf8b9fecb0899ca909d08bb71e9d05f2ad0969325900594f61779276b07d"
+    },
+    {
+      "bytes": 6227,
+      "path": "_worker.js",
+      "sha256": "6da9dad25f757da568b9cc74178ed7297cc11a978d6123fdeb9b681d3d9b1ee9"
+    },
+    {
+      "bytes": 13156,
+      "path": "apple-touch-icon.png",
+      "sha256": "221cd6b9cd03d2d71db9f9fc2576b191f5f6023a99c041dead45dd2091c441ad"
+    },
+    {
+      "bytes": 22002,
+      "path": "assets/css/refinement.css",
+      "sha256": "831156f47a749d4e0ad417d85f225728fe90b6c92a16d83b8f99a00ee638826f"
+    },
+    {
+      "bytes": 27511,
+      "path": "assets/css/style.css",
+      "sha256": "74e44505ddcc782246a03b1ad34f813efcd6ea93df6838914957af7f9b781655"
+    },
+    {
+      "bytes": 249805,
+      "path": "assets/images/baptism-josue-michel-1470.jpg",
+      "sha256": "3be710193b4ddfffdde18177dbf47fb85d20f4c75d41848b6f0c7587d213d618"
+    },
+    {
+      "bytes": 112804,
+      "path": "assets/images/baptism-josue-michel-870.jpg",
+      "sha256": "150546773f583ceacc29b0850150c34198e7ce565218e97d3b158783a7840137"
+    },
+    {
+      "bytes": 34290,
+      "path": "assets/images/logo.png",
+      "sha256": "a511765bddb9d8366868780a36b211fed806c83404b0df31fa20721a7db006ec"
+    },
+    {
+      "bytes": 81921,
+      "path": "assets/images/og-card.jpg",
+      "sha256": "178aa1d3833163d56c4bbffdd80758bcc6d8127b1a8b727345cd256a491aedbb"
+    },
+    {
+      "bytes": 188438,
+      "path": "assets/images/prayer-youth.jpg",
+      "sha256": "4b40efba7e3b7ad39e2e7e2b2ac9590576ddabd04c7eaaae6281df63e9c77974"
+    },
+    {
+      "bytes": 83395,
+      "path": "assets/images/testimony-cancerfree.jpg",
+      "sha256": "80fe7bc76cb6abd9dd2ed69ff04fbe30676af63a45432fe786a216fcaf1d0166"
+    },
+    {
+      "bytes": 74540,
+      "path": "assets/images/worship-keyboard.jpg",
+      "sha256": "04c9b7abfac65362b87b2ffd37710ba3b660a3abde3f2f36c41e800ddd223cec"
+    },
+    {
+      "bytes": 3318,
+      "path": "assets/js/main.js",
+      "sha256": "57fe00ad0651c0ac48ae4bd98b7cd03e4e292b4031b4a5260df303c761cb5d9e"
+    },
+    {
+      "bytes": 1096,
+      "path": "assets/js/refinement.js",
+      "sha256": "245658f9db1e753d20567ef38fcac321866ad0c103f6912b8f899da83e733ff8"
+    },
+    {
+      "bytes": 514,
+      "path": "favicon-16x16.png",
+      "sha256": "380704ec64d59aa5c14bd76cba5f0adaf6c4ff31a6bbc5bdf217f186f94808c8"
+    },
+    {
+      "bytes": 1377,
+      "path": "favicon-32x32.png",
+      "sha256": "b5274a4b2f79d6b2471f348dd9f2c919b4801936d4d417b2b25b18d883adcb3b"
+    },
+    {
+      "bytes": 536,
+      "path": "favicon.ico",
+      "sha256": "11a2b24070c54da7784292130979dc675e4b11131425a866c08e03207a095eda"
+    },
+    {
+      "bytes": 70,
+      "path": "robots.txt",
+      "sha256": "6f8b11ec6c7874269df023e40c7b4d45cd9fee61e57be104c23e7439c00f36b2"
+    },
+    {
+      "bytes": 1338,
+      "path": "sitemap.xml",
+      "sha256": "7da4445a4352915dc97a9563de4c951ee7153acb5fa10044fcceb3d1485e0308"
+    }
+  ],
+  "archiveSha256": "7b34db59d94010a36bc78e06b647f9431a0f5d0c60288a8a5bf952877dc2b8f0"
+}
