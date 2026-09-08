@@ -60,3 +60,12 @@ html{scroll-padding-top:100px}body{overflow-x:visible}a:focus-visible,button:foc
 .give-opening-action .giving-detail{font-size:13px;margin:12px auto 0;color:rgba(255,255,255,.85)}
 @media(max-width:760px){.giving-announcement a{display:block;margin:6px 0 0}}
 .give-opening-action .giving-primary{font-size:14px;line-height:1.5;min-height:54px;min-width:220px;max-width:100%;padding:16px 24px}
+
+/* Give page: a distinct, accessible card for the current giving platform. */
+.give-opening-action .giving-platform-card{position:relative;max-width:580px;margin:0 auto;padding:30px 36px;background:var(--cream);border:1px solid var(--gold);border-top:4px solid var(--gold);border-radius:12px;box-shadow:0 14px 36px rgba(0,0,0,.2);color:var(--ink)}
+.give-opening-action .giving-card-label{font:600 10px/1.6 var(--sans);letter-spacing:.16em;color:#795523;margin:0 0 8px}
+.giving-platform-card h2{font:600 clamp(28px,4vw,36px)/1.2 var(--serif);color:var(--ink);letter-spacing:-.02em;margin:0 0 16px}
+.give-opening-action .giving-platform-card .giving-platform{font-size:15px;line-height:1.65;color:var(--body-ink);margin:0 auto 22px}
+.give-opening-action .giving-platform-card .giving-detail{color:var(--body-ink);font-size:12px;line-height:1.6;margin:14px auto 0}
+.give-opening-action .giving-platform-card .giving-primary{width:100%;max-width:300px;min-width:0}
+@media(max-width:480px){.give-opening-action .giving-platform-card{padding:25px 20px}.give-opening-action .giving-platform-card .giving-primary{max-width:none}}

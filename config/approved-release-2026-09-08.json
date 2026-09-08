@@ -1,5 +1,5 @@
 {
-  "release": "Approved September 8, 2026 live release with requested Suite 1800 footer",
+  "release": "Approved September 8, 2026 live release with prominent Planning Center giving card",
   "files": [
     {
       "bytes": 803,
@@ -32,9 +32,9 @@
       "sha256": "2f748f3ecc70fd127c7548027dc7e416714fc065e4a66c7fe13e973d2f2f38e1"
     },
     {
-      "bytes": 11879,
+      "bytes": 12071,
       "path": "_nlh-pages/give.page",
-      "sha256": "102cfd696b560999e7c4913faf59a84a35a756790ef30d9889c7b883be333a88"
+      "sha256": "c2bf30474a387bf4d5b21d4ff01cf123105b180e446a06470943bc492fcae6e2"
     },
     {
       "bytes": 13394,
@@ -97,9 +97,9 @@
       "sha256": "221cd6b9cd03d2d71db9f9fc2576b191f5f6023a99c041dead45dd2091c441ad"
     },
     {
-      "bytes": 22002,
+      "bytes": 23124,
       "path": "assets/css/refinement.css",
-      "sha256": "831156f47a749d4e0ad417d85f225728fe90b6c92a16d83b8f99a00ee638826f"
+      "sha256": "9d2c713ef27dd57d153ec63050b22ea6c7c703243f511b5e98e10154cf766281"
     },
     {
       "bytes": 27511,
@@ -177,5 +177,5 @@
       "sha256": "7da4445a4352915dc97a9563de4c951ee7153acb5fa10044fcceb3d1485e0308"
     }
   ],
-  "archiveSha256": "e7da5f8b2975c916153735fb8540e151a31d004f6c4095eb239dc15c07890709"
+  "archiveSha256": "1477d4dffb36a80b791e999d8ff8bffd24c4e2757679ad02ae69d75c0955e6dd"
 }
