@@ -1,0 +1,25 @@
+name: Verify website release
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python scripts/package-cloudflare.py --out output/release
+      - run: python scripts/verify-approved-release.py --package output/release
+      - run: node --test scripts/cloudflare-routing.test.mjs

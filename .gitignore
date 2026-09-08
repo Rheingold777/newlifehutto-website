@@ -1,2 +1,24 @@
-.wrangler/
+# Generated builds, local backups and verification output
+output/
+backups/
 node_modules/
+__pycache__/
+*.pyc
+.wrangler/
+.playwright-cli/
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+*.pem
+*.key
+*.p12
+*.pfx
+*service-account*.json
+*credentials*.json
+*gsc-evidence*.json
+*gsc-ui-evidence*.json
+desktop.ini
+Thumbs.db
+.DS_Store

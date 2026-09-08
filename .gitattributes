@@ -1,0 +1,12 @@
+* text=auto eol=lf
+# Preserve the reviewed public artifact bytes across Windows/Linux checkouts.
+site/** -text
+templates/** -text
+site/** whitespace=cr-at-eol
+templates/** whitespace=cr-at-eol
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
+*.webp binary
+*.woff2 binary
