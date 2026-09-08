@@ -1,5 +1,5 @@
 {
-  "release": "Approved September 8, 2026 candidate",
+  "release": "Approved September 8, 2026 live release with requested Suite 1800 footer",
   "files": [
     {
       "bytes": 803,
@@ -7,39 +7,39 @@
       "sha256": "82e84d95c1958cc011f42e4c2fcbdefbeb3b6d6a39f33caa6e18d21fdebe9e55"
     },
     {
-      "bytes": 8668,
+      "bytes": 8682,
       "path": "_nlh-pages/about.page",
-      "sha256": "ca918ff83311dc1c5799dbdbc476989e758dc10871260301ea1fc9f422805f65"
+      "sha256": "8952a0644a71f2f2e41488ab7c396ca42dc94eeef61b330ac3ecd1131505f0a3"
     },
     {
-      "bytes": 11515,
+      "bytes": 11529,
       "path": "_nlh-pages/beliefs.page",
-      "sha256": "528baf916229e7b8da467a6493d14a3dac00b0a5f6dfee35e6ea796834c9366e"
+      "sha256": "d8da59d05a3363ead37467881e5287a7dfb1ded97731eecdb3cadc3ce75bf290"
     },
     {
-      "bytes": 17917,
+      "bytes": 17931,
       "path": "_nlh-pages/blog--fuel-fasting.page",
-      "sha256": "6408038df8e9e722506a64aac5428c57ddce168a09cca49b563bf3e0ab307c1d"
+      "sha256": "9a0b82926c9e65493dd680526babfd800fd260b498965b9f7888e05e0dd4249b"
     },
     {
-      "bytes": 16212,
+      "bytes": 16226,
       "path": "_nlh-pages/contact.page",
-      "sha256": "c8dbd529b33d470d7b668d258ed491b3233da65d145f6258d5a2401970f648ae"
+      "sha256": "e738a18ecb6861571cfd5ecd732edb98e33d02cf8f82ff34765fec65b5b58118"
     },
     {
-      "bytes": 13027,
+      "bytes": 13041,
       "path": "_nlh-pages/georgetown.page",
-      "sha256": "13b29cfa0a238ce796ad07ff7f6adf92ee3fc7fa860008080f39831c25e44586"
+      "sha256": "2f748f3ecc70fd127c7548027dc7e416714fc065e4a66c7fe13e973d2f2f38e1"
     },
     {
-      "bytes": 11865,
+      "bytes": 11879,
       "path": "_nlh-pages/give.page",
-      "sha256": "70e73f7645602e677198403e142f49c6b2ceddcd9f120e614553686b92c3f92f"
+      "sha256": "102cfd696b560999e7c4913faf59a84a35a756790ef30d9889c7b883be333a88"
     },
     {
-      "bytes": 13380,
+      "bytes": 13394,
       "path": "_nlh-pages/home.page",
-      "sha256": "4dfcecab22f32f35c1c2fb64d0b4066ac598e55ef4fdba539964b9450d0437a4"
+      "sha256": "e74b30c48cd061a70d9d28121546bc33904688e1c5e74d03408c629eec862d8c"
     },
     {
       "bytes": 803,
@@ -47,39 +47,39 @@
       "sha256": "82e84d95c1958cc011f42e4c2fcbdefbeb3b6d6a39f33caa6e18d21fdebe9e55"
     },
     {
-      "bytes": 11047,
+      "bytes": 11061,
       "path": "_nlh-pages/pastor.page",
-      "sha256": "b04390209dd8295f794ce5fd2374f614a4a70133721895a39ff9dbb98517c028"
+      "sha256": "04117d8a208c5331ee39aea2e5f92fba27a1cc762f237c26beac03b29b953fb3"
     },
     {
-      "bytes": 13763,
+      "bytes": 13777,
       "path": "_nlh-pages/pflugerville.page",
-      "sha256": "ffdc75b00c7c7841ebb9cf2e6019fa54bca3e5944e8dab57f02e2387d2e2eea4"
+      "sha256": "39ef85a5cd0814a1b26ba4e9b32f66a4b733132dfd3d37755d8e36fae9eb5d6d"
     },
     {
-      "bytes": 9611,
+      "bytes": 9625,
       "path": "_nlh-pages/prayer.page",
-      "sha256": "f851232179de157be519f037b7c50ecad6a7fc856718be35b7dc6e5cc6c47564"
+      "sha256": "34b182cecbc52a49f37dbcf554bc7e0f2e43951c73b41eada95d41ef4036d6f3"
     },
     {
-      "bytes": 14594,
+      "bytes": 14608,
       "path": "_nlh-pages/round-rock.page",
-      "sha256": "19d0c32727331a19e8602ea11566a6885f16a22496a2a4a62d4cf8d9a87b9fe1"
+      "sha256": "3de4f6569024ff9c8609d2a2024c14bd4014cf45eaa1ac47ae53b9849f28de08"
     },
     {
-      "bytes": 12859,
+      "bytes": 12873,
       "path": "_nlh-pages/taylor.page",
-      "sha256": "fee77ad3c2ebf912f91d98366259d8060d0507cd3bde81d089d85bcb26304110"
+      "sha256": "7fd14d9016cd4bda8480c752077ff355eae4f896d5145270f6e930e7437e9325"
     },
     {
-      "bytes": 14009,
+      "bytes": 14023,
       "path": "_nlh-pages/visit.page",
-      "sha256": "466e4ca3e328c98946143f563f46760a9aefeeb236fb16eb23c6149a4ec4cdf0"
+      "sha256": "17a03325713673a5afa16321f8028e6176c84f4036400f9a8feebfd60f019b19"
     },
     {
-      "bytes": 13112,
+      "bytes": 13126,
       "path": "_nlh-pages/what-to-expect.page",
-      "sha256": "0205b24500b82dbeb8ccb734efa06d795ad0c21cd3a0caaeaeada62e2663d756"
+      "sha256": "5a7406d934e14006c1c012e2d057fd2ed86c5602d530b33c1c5a6b87afe3dbe2"
     },
     {
       "bytes": 65,
@@ -177,5 +177,5 @@
       "sha256": "7da4445a4352915dc97a9563de4c951ee7153acb5fa10044fcceb3d1485e0308"
     }
   ],
-  "archiveSha256": "7b34db59d94010a36bc78e06b647f9431a0f5d0c60288a8a5bf952877dc2b8f0"
+  "archiveSha256": "e7da5f8b2975c916153735fb8540e151a31d004f6c4095eb239dc15c07890709"
 }
