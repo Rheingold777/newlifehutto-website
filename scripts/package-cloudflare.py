@@ -82,7 +82,7 @@ def build(site: Path, output: Path, release_path: Path, rollback_archive: Path |
     # Build inputs are portable public source. Recovery archives remain in
     # church-controlled storage; verify the real archive before a release.
     if rollback_archive is not None and sha(rollback_archive.read_bytes()) != baseline["archiveSha256"].lower():
-        raise ValueError("Production rollback archive hash does not match the recorded v4 baseline")
+        raise ValueError("Production rollback archive hash does not match the recorded production baseline")
     dates = release.get("pageLastModified", {})
     if set(dates) - set(routes["routes"]):
         raise ValueError("Content-date keys must match intended routes")
@@ -180,7 +180,7 @@ def build(site: Path, output: Path, release_path: Path, rollback_archive: Path |
     manifest = {"schemaVersion": 1, "state": "Local release candidate; not deployed", "sourceDirectory": site.relative_to(ROOT).as_posix() if site.is_relative_to(ROOT) else site.name, "releaseContext": release, "rollbackArchiveVerified": rollback_archive is not None, "canonicalOrigin": origin, "routes": config, "sourceFiles": sorted(source_files, key=lambda r: r['source']), "packagedFiles": [{"path": p, "bytes": len(b), "sha256": sha(b)} for p, b in sorted(files.items())], "archive": {"path": "deploy.zip", "bytes": archive.stat().st_size, "sha256": sha(archive.read_bytes())}, "sitemapLastModified": dates, "sitemapLastModifiedPolicy": release["lastModifiedPolicy"], "publicWrites": []}
     (output / "manifest.json").write_bytes(json_bytes(manifest))
     (output / "README.md").write_text((RUNTIME / "README.md").read_text(encoding="utf-8"), encoding="utf-8")
-    rollback = f"# Rollback reference\n\nNo deployment was made by packaging. Immediately before release, re-read production and confirm it is still deployment `{baseline['deploymentId']}`. If it changed, reconcile again.\n\n- v4 archive name: `{baseline['archiveName']}`\n- SHA-256: `{baseline['archiveSha256']}`\n- Custody: {baseline['archiveCustody']}\n- Archive verified during this build: {rollback_archive is not None}\n- Cloudflare Pages project: `{release['project']}`\n- Existing production runtime: {baseline['runtime']}.\n\nBefore release, verify recovery availability and the archive with `--rollback-archive PATH`. A build without that argument does not prove backup availability. After an authorized release, use Cloudflare's rollback to the verified v4 production deployment if new routing or site content fails. DNS, domain registrar, MX/TXT records, provider settings, and Search Console are outside this package.\n"
+    rollback = f"# Rollback reference\n\nNo deployment was made by packaging. Immediately before release, re-read production and confirm it is still deployment `{baseline['deploymentId']}`. If it changed, reconcile again.\n\n- Production archive name: `{baseline['archiveName']}`\n- SHA-256: `{baseline['archiveSha256']}`\n- Custody: {baseline['archiveCustody']}\n- Archive verified during this build: {rollback_archive is not None}\n- Cloudflare Pages project: `{release['project']}`\n- Existing production runtime: {baseline['runtime']}.\n\nBefore release, verify recovery availability and the archive with `--rollback-archive PATH`. A build without that argument does not prove backup availability. After an authorized release, use Cloudflare's rollback to the verified prior production deployment if new routing or site content fails. DNS, domain registrar, MX/TXT records, provider settings, and Search Console are outside this package.\n"
     (output / "ROLLBACK.md").write_text(rollback, encoding="utf-8")
     return manifest
 
@@ -190,7 +190,7 @@ if __name__ == "__main__":
     parser.add_argument("--site", type=Path, default=ROOT / "site")
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--release-context", type=Path, default=RUNTIME / "release-context.json")
-    parser.add_argument("--rollback-archive", type=Path, help="Optional church-controlled v4 archive to verify before release; not copied into output")
+    parser.add_argument("--rollback-archive", type=Path, help="Optional church-controlled production archive to verify before release; not copied into output")
     args = parser.parse_args()
     try:
         result = build(args.site, args.out, args.release_context, args.rollback_archive)
