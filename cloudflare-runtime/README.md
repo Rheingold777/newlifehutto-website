@@ -10,6 +10,6 @@ Build from the repository root with `python scripts/package-cloudflare.py --out 
 
 Deploy the entire generated `output/release/deploy/` directory with Wrangler 4.85.0. The root README documents the manual workflow. Do not deploy the repository root, raw site folder, or archive. Before deployment, confirm production has not changed since the verified baseline. After deployment, verify all canonical pages, assets, redirects, missing routes, robots/sitemap, exact maps and Giving/contact links. Roll back through Cloudflare to the verified baseline if necessary.
 
-Package fingerprints in `config/approved-release-2026-09-08.json` preserve the exact reviewed release. Future intentional source changes require a new reviewed fingerprint set and an explicit update to the verification target.
+Package fingerprints in `config/approved-release-2026-09-28.json` (previous: `approved-release-2026-09-08.json`) preserve the exact reviewed release. Future intentional source changes require a new reviewed fingerprint set and an explicit update to the verification target.
 
 Official references: [advanced mode](https://developers.cloudflare.com/pages/functions/advanced-mode/), [Pages serving rules](https://developers.cloudflare.com/pages/configuration/serving-pages/), [Functions routing](https://developers.cloudflare.com/pages/functions/routing/), [Direct Upload](https://developers.cloudflare.com/pages/get-started/direct-upload/).
