@@ -1,15 +1,17 @@
 {
   "project": "newlifehutto",
   "compatibilityDate": "2026-03-20",
-  "releaseState": "A2P 10DLC compliance release (approved by Pastor Bernhard 2026-09-28): /privacy/, /terms/, /sms/, /textos/ and footer legal links; ready for publication",
+  "releaseState": "Published to production 2026-09-28 (CT) as deployment be3d65e8-0e44-49fd-83de-74d295a4e0c2 from commit 13db5eb: A2P 10DLC pages plus phone swap on /privacy/ and /terms/ (Pastor Bernhard's cell replaced with church line (512) 829-7402; approved by Pastor Bernhard 2026-09-28). Rollback: ac5be19f-1b5c-495b-ae0f-e394c6ccca3c",
   "productionBaseline": {
-    "deploymentId": "6d2fc33c-0a2b-4d26-b790-fa45882d8fe9",
-    "publishedAt": "2026-09-08T18:11:11.135213Z",
-    "archiveSha256": "7ca8cd7357412b0ca8cd6755c071d3d83d165b04f16dca8c8a1898b6aedabd24",
+    "deploymentId": "be3d65e8-0e44-49fd-83de-74d295a4e0c2",
+    "publishedAt": "2026-09-29T01:29Z",
+    "archiveSha256": "53dcb097565290cc19fe36451066e76649385ea95e741420c8f0c20d94d54ca5",
     "runtime": "Cloudflare Pages with the approved advanced-mode routing Worker",
-    "priorDeploymentId": "52ab2c5e-058b-4353-8c85-cada43d3d099",
+    "priorDeploymentId": "ac5be19f-1b5c-495b-ae0f-e394c6ccca3c",
+    "rollbackDeploymentId": "ac5be19f-1b5c-495b-ae0f-e394c6ccca3c",
+    "rollbackArchiveSha256": "f6efb89232d32cf577c97f1f186fcc6bf9724c4abc1e6d7816fa6c1f82a7879f",
     "archiveName": "deploy.zip",
-    "archiveCustody": "Church-controlled recovery backup; not stored in this public repository."
+    "archiveCustody": "Local release candidate output/release-phone-20260928/deploy.zip on the build box; copy to church-controlled recovery storage. Not stored in this public repository."
   },
   "sourceConstraint": "Build the reconciled site/ directory with scripts/package-cloudflare.py. Deploy only the generated deploy/ directory; never the repository root or bare site/.",
   "pageLastModified": {
@@ -34,14 +36,14 @@
   },
   "lastModifiedPolicy": "The original 14 pages received meaningful address/navigation/footer reconciliation on September 8, 2026 (the September 28 footer legal-link addition is not treated as a content change). The four A2P compliance pages (/privacy/, /terms/, /sms/, /textos/) were created September 28, 2026. Dates are explicit content-change dates, never filesystem or packaging timestamps.",
   "verifiedProject": {
-    "verificationMethod": "Read-only Cloudflare project inspection, September 8, 2026; refresh before release.",
+    "verificationMethod": "wrangler pages deployment list (production), September 28, 2026 (CT); refresh before release.",
     "project": "newlifehutto",
     "productionBranch": "main",
     "source": null,
     "deploymentMethod": "Direct Upload; ad_hoc production deployment",
-    "canonicalProductionDeploymentId": "6d2fc33c-0a2b-4d26-b790-fa45882d8fe9",
+    "canonicalProductionDeploymentId": "be3d65e8-0e44-49fd-83de-74d295a4e0c2",
     "canonicalProductionDeploymentStatus": "success",
-    "canonicalProductionDeploymentCreatedAt": "2026-09-08T18:11:11.135213Z",
+    "canonicalProductionDeploymentCreatedAt": "2026-09-29T01:29Z",
     "productionCompatibilityDate": "2026-03-20",
     "productionCompatibilityFlags": [],
     "productionUsageModel": "standard",
