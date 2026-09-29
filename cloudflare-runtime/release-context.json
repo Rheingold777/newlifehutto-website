@@ -1,7 +1,7 @@
 {
   "project": "newlifehutto",
   "compatibilityDate": "2026-03-20",
-  "releaseState": "User-requested prominent Planning Center giving card, ready for publication",
+  "releaseState": "A2P 10DLC compliance release (approved by Pastor Bernhard 2026-09-28): /privacy/, /terms/, /sms/, /textos/ and footer legal links; ready for publication",
   "productionBaseline": {
     "deploymentId": "6d2fc33c-0a2b-4d26-b790-fa45882d8fe9",
     "publishedAt": "2026-09-08T18:11:11.135213Z",
@@ -26,9 +26,13 @@
     "/round-rock/": "2026-09-08",
     "/pflugerville/": "2026-09-08",
     "/taylor/": "2026-09-08",
-    "/georgetown/": "2026-09-08"
+    "/georgetown/": "2026-09-08",
+    "/privacy/": "2026-09-28",
+    "/terms/": "2026-09-28",
+    "/sms/": "2026-09-28",
+    "/textos/": "2026-09-28"
   },
-  "lastModifiedPolicy": "All 14 pages received meaningful address/navigation/footer reconciliation on September 8, 2026, confirmed by the website implementation task. Dates are explicit content-change dates, never filesystem or packaging timestamps.",
+  "lastModifiedPolicy": "The original 14 pages received meaningful address/navigation/footer reconciliation on September 8, 2026 (the September 28 footer legal-link addition is not treated as a content change). The four A2P compliance pages (/privacy/, /terms/, /sms/, /textos/) were created September 28, 2026. Dates are explicit content-change dates, never filesystem or packaging timestamps.",
   "verifiedProject": {
     "verificationMethod": "Read-only Cloudflare project inspection, September 8, 2026; refresh before release.",
     "project": "newlifehutto",

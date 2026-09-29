@@ -37,10 +37,10 @@ Choose a new output directory on each build. The packager refuses to overwrite a
 
 ## Release control and rollback
 
-The GitHub deployment workflow is **manual `workflow_dispatch` only**, on `main`; pushing or merging does not trigger that workflow. It packages and verifies the approved 35-file release, then uses Wrangler **4.85.0** and existing secrets `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID`. Secret values never belong in files. The separate legacy GitHub Pages publishing configuration was disabled September 8, 2026; Cloudflare remains the live host.
+The GitHub deployment workflow is **manual `workflow_dispatch` only**, on `main`; pushing or merging does not trigger that workflow. It packages and verifies the approved 39-file release, then uses Wrangler **4.85.0** and existing secrets `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID`. Secret values never belong in files. The separate legacy GitHub Pages publishing configuration was disabled September 8, 2026; Cloudflare remains the live host.
 
 Before a public release, refresh the actual Cloudflare deployment and account configuration, confirm authorization and recovery availability, and review `cloudflare-runtime/README.md`. The recorded baseline is in `cloudflare-runtime/release-context.json`; changes to production after that record must be reconciled. Verify the privately held prior-release `deploy.zip` through the optional `--rollback-archive PATH` build argument before release. The archive is not required for portable source builds and is not copied into them.
 
-Cloudflare currently uses Direct Upload. This repository does not change its Git integration, DNS, registrar, email, giving providers or Search Console access. A source commit is not proof of a public deployment. Confirm the final Cloudflare deployment and all 14 routes after publishing; use the verified baseline deployment for rollback if needed.
+Cloudflare currently uses Direct Upload. This repository does not change its Git integration, DNS, registrar, email, giving providers or Search Console access. A source commit is not proof of a public deployment. Confirm the final Cloudflare deployment and all 18 routes after publishing; use the verified baseline deployment for rollback if needed.
 
 Do not commit private GSC exports, church operational records, donor/member data, credentials, browser profiles, `.wrangler`, screenshots of authenticated systems, or bulk backups. The public site assets and their visible credits are included deliberately.

@@ -87,7 +87,7 @@ status, headers, body = request("/visit/?ref=maps", host="newlifehutto.com")
 check("HTTP apex upgrade preserves path/query", status == 301 and headers.get("location") == "https://newlifehutto.com/visit/?ref=maps")
 sitemap = ElementTree.fromstring((args.package / "deploy" / "sitemap.xml").read_bytes())
 locations = [e.text for e in sitemap.findall("{*}url/{*}loc")]
-check("sitemap contains only 14 canonical routes", set(locations) == {manifest["canonicalOrigin"] + p for p in manifest["routes"]["pages"]} and len(locations) == 14)
+check("sitemap contains only 18 canonical routes", set(locations) == {manifest["canonicalOrigin"] + p for p in manifest["routes"]["pages"]} and len(locations) == 18)
 check("public robots permits crawling", b"Allow: /" in (args.package / "deploy" / "robots.txt").read_bytes())
 check("ZIP hash matches manifest", hashlib.sha256((args.package / "deploy.zip").read_bytes()).hexdigest() == manifest["archive"]["sha256"])
 report = {"kind": "Actual local Wrangler Pages/workerd HTTP checks", "base": args.base, "package": str(args.package.resolve()), "passed": sum(c["passed"] for c in checks), "failed": sum(not c["passed"] for c in checks), "checks": checks, "limitations": ["Local workerd does not establish production account settings or deployment health.", "The Node unit suite separately verifies native HTTPS apex behavior without a redirect.", "No public deployment, browser analytics execution, form submission, or provider action occurred."]}

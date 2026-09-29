@@ -17,7 +17,7 @@ const env = { ASSETS: { fetch: async request => {
 } } };
 const run = (p, options = {}) => handler.fetch(new Request(`https://newlifehutto.com${p}`, options), env);
 
-test('all 14 canonical pages serve exact intended bodies and HTML content type', async () => {
+test('all 18 canonical pages serve exact intended bodies and HTML content type', async () => {
   for (const route of routes.routes) {
     const response = await run(route);
     assert.equal(response.status, 200, route);

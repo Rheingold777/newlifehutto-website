@@ -1,10 +1,11 @@
 {
   "origin": "https://newlifehutto.com",
-  "routes": ["/", "/about/", "/visit/", "/prayer/", "/give/", "/contact/", "/beliefs/", "/pastor/", "/blog/fuel-fasting/", "/what-to-expect/", "/round-rock/", "/pflugerville/", "/taylor/", "/georgetown/"],
+  "routes": ["/", "/about/", "/visit/", "/prayer/", "/give/", "/contact/", "/beliefs/", "/pastor/", "/blog/fuel-fasting/", "/what-to-expect/", "/round-rock/", "/pflugerville/", "/taylor/", "/georgetown/", "/privacy/", "/terms/", "/sms/", "/textos/"],
   "legacyRedirects": {
     "/new-here": "/visit/",
     "/about-us": "/about/",
     "/about.html": "/about/",
-    "/prayer.html": "/prayer/"
+    "/prayer.html": "/prayer/",
+    "/privacy-policy": "/privacy/"
   }
 }

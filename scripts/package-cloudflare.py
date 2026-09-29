@@ -67,8 +67,8 @@ def build(site: Path, output: Path, release_path: Path, rollback_archive: Path |
     origin = routes["origin"].rstrip("/")
     if origin != "https://newlifehutto.com":
         raise ValueError("Unexpected canonical origin")
-    if len(routes["routes"]) != 14 or len(set(routes["routes"])) != 14:
-        raise ValueError("Expected the 14 explicitly intended routes")
+    if len(routes["routes"]) != 18 or len(set(routes["routes"])) != 18:
+        raise ValueError("Expected the 18 explicitly intended routes")
     expected_html = {((p.strip("/") + "/") if p != "/" else "") + "index.html" for p in routes["routes"]}
     actual_html = {p.relative_to(site).as_posix() for p in site.rglob("*.html")}
     if actual_html - expected_html - {"404.html"}:
