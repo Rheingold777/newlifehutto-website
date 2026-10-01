@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--package", type=Path, required=True)
 args = parser.parse_args()
-expected = json.loads((ROOT / "config/approved-release-2026-09-08.json").read_text())
+expected = json.loads((ROOT / "config/approved-release-2026-09-28.json").read_text())
 folder = args.package / "deploy"
 actual = {p.relative_to(folder).as_posix(): {"sha256": hashlib.sha256(p.read_bytes()).hexdigest(), "bytes": p.stat().st_size} for p in folder.rglob("*") if p.is_file()}
 wanted = {p["path"]: {"sha256": p["sha256"], "bytes": p["bytes"]} for p in expected["files"]}

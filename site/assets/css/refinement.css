@@ -69,3 +69,5 @@ html{scroll-padding-top:100px}body{overflow-x:visible}a:focus-visible,button:foc
 .give-opening-action .giving-platform-card .giving-detail{color:var(--body-ink);font-size:12px;line-height:1.6;margin:14px auto 0}
 .give-opening-action .giving-platform-card .giving-primary{width:100%;max-width:300px;min-width:0}
 @media(max-width:480px){.give-opening-action .giving-platform-card{padding:25px 20px}.give-opening-action .giving-platform-card .giving-primary{max-width:none}}
+
+.footer-text-signup{margin-bottom:14px;font-size:12px}.footer-text-signup a{font-weight:600}
