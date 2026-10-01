@@ -17,4 +17,5 @@ manifest = json.loads((args.package / "manifest.json").read_text())
 assert {p["path"]: {"sha256": p["sha256"], "bytes": p["bytes"]} for p in manifest["packagedFiles"]} == actual
 zip_sha = hashlib.sha256((args.package / "deploy.zip").read_bytes()).hexdigest()
 assert zip_sha == manifest["archive"]["sha256"]
-print(json.dumps({"approved_deploy_files": len(actual), "all_file_hashes_match": True, "zip_manifest_matches": True, "original_zip_hash_matches": zip_sha == expected["archiveSha256"]}))
+assert zip_sha == expected["archiveSha256"], f"deploy.zip {zip_sha} differs from the approved archive {expected['archiveSha256']}"
+print(json.dumps({"approved_deploy_files": len(actual), "all_file_hashes_match": True, "zip_manifest_matches": True, "original_zip_hash_matches": True}))
