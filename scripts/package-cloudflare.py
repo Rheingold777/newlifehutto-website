@@ -137,14 +137,18 @@ def build(site: Path, output: Path, release_path: Path, rollback_archive: Path |
         public_assets.append("/" + rel)
         source_files.append({"source": rel, "packaged": rel, "sha256": sha(content), "bytes": len(content)})
 
-    files["robots.txt"] = f"User-agent: *\nAllow: /\n\nSitemap: {origin}/sitemap.xml\n".encode()
+    # Hand-maintained root files (added by the 2026-10-07 audit release) win over generated defaults.
+    files["robots.txt"] = (site / "robots.txt").read_bytes() if (site / "robots.txt").is_file() else f"User-agent: *\nAllow: /\n\nSitemap: {origin}/sitemap.xml\n".encode()
     lines = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for route in routes["routes"]:
         lastmod = f"<lastmod>{dates[route]}</lastmod>" if route in dates else ""
         lines.append(f"  <url><loc>{escape(origin + route)}</loc>{lastmod}</url>")
     lines.append("</urlset>")
-    files["sitemap.xml"] = ("\n".join(lines) + "\n").encode()
+    files["sitemap.xml"] = (site / "sitemap.xml").read_bytes() if (site / "sitemap.xml").is_file() else ("\n".join(lines) + "\n").encode()
     public_assets += ["/robots.txt", "/sitemap.xml"]
+    if (site / "llms.txt").is_file():
+        files["llms.txt"] = (site / "llms.txt").read_bytes()
+        public_assets.append("/llms.txt")
     not_found = (RUNTIME / "404.html").read_bytes()
     files["_nlh-pages/not-found.page"] = not_found
     files["404.html"] = not_found  # Also disables Pages' implicit SPA fallback.
