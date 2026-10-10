@@ -124,7 +124,7 @@ for route in CONFIG['routes']:
 status, headers, body = fetch('/sitemap.xml')
 check('Sitemap direct 200', status == 200)
 locs = [node.text for node in ET.fromstring(body).findall('{http://www.sitemaps.org/schemas/sitemap/0.9}url/{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
-check('Sitemap exactly matches 14 canonical pages', len(locs) == 14 and set(locs) == {ORIGIN + route for route in EXPECTED}, locs)
+check('Sitemap exactly matches 18 canonical pages', len(locs) == 18 and set(locs) == {ORIGIN + route for route in EXPECTED}, locs)
 
 link_failures = []
 route_links = {}
@@ -145,7 +145,7 @@ while queue:
     if route in reached: continue
     reached.add(route)
     queue.extend(route_links.get(route, set()) - reached)
-check('Homepage crawl reaches all 14 intended pages', reached == EXPECTED, {'reached': sorted(reached), 'missing': sorted(EXPECTED - reached)})
+check('Homepage crawl reaches all 18 intended pages', reached == EXPECTED, {'reached': sorted(reached), 'missing': sorted(EXPECTED - reached)})
 
 asset_failures = []
 pending = list(assets)

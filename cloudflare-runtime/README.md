@@ -1,6 +1,6 @@
 # Cloudflare runtime and release
 
-The packager creates a Pages advanced-mode `_worker.js`, `_routes.json`, 404 response, assets and 14 mapped HTML routes. `env.ASSETS` reads internal `/_nlh-pages/*.page` files; public paths are mapped by the Worker. Production HTTPS/apex/slash redirects preserve paths and queries. Localhost and pages.dev responses are noindex; production allows crawling.
+The packager creates a Pages advanced-mode `_worker.js`, `_routes.json`, 404 response, assets and 18 mapped HTML routes. `env.ASSETS` reads internal `/_nlh-pages/*.page` files; public paths are mapped by the Worker. Production HTTPS/apex/slash redirects preserve paths and queries. Localhost and pages.dev responses are noindex; production allows crawling.
 
 The verified production baseline, its runtime, deployment reference and recovery ZIP fingerprint are recorded in `release-context.json`. Project `newlifehutto` is Direct Upload, branch `main`, compatibility date `2026-03-20`, no flags, standard usage. Recheck these before release; the church retains the actual recovery archive privately.
 
