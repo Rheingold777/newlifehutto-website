@@ -68,12 +68,20 @@
   "telephone": "+1-512-829-7402"
 }
 </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6QGPDMK9RN"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-6QGPDMK9RN');
+      (function () {
+        // GA4 fires only on the live domain, never on *.pages.dev previews or localhost.
+        var h = location.hostname;
+        if (h !== 'newlifehutto.com' && h !== 'www.newlifehutto.com') return;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-6QGPDMK9RN';
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', 'G-6QGPDMK9RN');
+      })();
     </script>
 
 <link rel="stylesheet" href="/assets/css/refinement.css?v=1">

@@ -107,12 +107,20 @@
     <link rel="stylesheet" href="/assets/css/style.css?v=7">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6QGPDMK9RN"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-6QGPDMK9RN');
+      (function () {
+        // GA4 fires only on the live domain, never on *.pages.dev previews or localhost.
+        var h = location.hostname;
+        if (h !== 'newlifehutto.com' && h !== 'www.newlifehutto.com') return;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-6QGPDMK9RN';
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', 'G-6QGPDMK9RN');
+      })();
     </script>
 <link rel="stylesheet" href="/assets/css/refinement.css?v=1"></head>
 <body>
