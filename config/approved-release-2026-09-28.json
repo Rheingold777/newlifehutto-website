@@ -1,5 +1,5 @@
 {
-  "archiveSha256": "7094ddd746515caa3ecc07714b269ff2c886c9b2ba18ba590e64ac6f5edd81e1",
+  "archiveSha256": "2838a64e6c9ebc992f4b44c66e36fd4693f510b316c7804b9c65ecf3f5a142f3",
   "files": [
     {
       "bytes": 803,
@@ -7,39 +7,39 @@
       "sha256": "82e84d95c1958cc011f42e4c2fcbdefbeb3b6d6a39f33caa6e18d21fdebe9e55"
     },
     {
-      "bytes": 8858,
+      "bytes": 9493,
       "path": "_nlh-pages/about.page",
-      "sha256": "7ff04d3eaa960a3f8420b74df7cd3ca327a608aafe70d20e2b8cb71eeae7c092"
+      "sha256": "be5f466a4246c85d5d5dda61b9d1b8797ef6ce7c9bf43cc0d250cbffe1cf0e3d"
     },
     {
-      "bytes": 11705,
+      "bytes": 12340,
       "path": "_nlh-pages/beliefs.page",
-      "sha256": "e63d861b4c1a84f0706335466eeebdf507f531c2beab834edcaab681c4ff7f3a"
+      "sha256": "ae95430cf69cf783bcdec6b44a3ca7337cc5663ef4c3559514cefafb4dd73c6d"
     },
     {
-      "bytes": 18107,
+      "bytes": 18730,
       "path": "_nlh-pages/blog--fuel-fasting.page",
-      "sha256": "3418e1ddaa122822c02440994e39c50c210c36c7c95077c82a6f4398eaa4394c"
+      "sha256": "06787910054c59c0c786dab16fd12ac1ac26f5de7148feff2445576c5ba8c3ff"
     },
     {
-      "bytes": 16285,
+      "bytes": 16976,
       "path": "_nlh-pages/contact.page",
-      "sha256": "ab39928aedf4ea88e715fc88dee351dfc744c2eb4c3e59cc5a407b33af21664c"
+      "sha256": "885671f9553d80b97da53e2dd3a888ce37074dd9c98d13addbffa8e3953388f0"
     },
     {
-      "bytes": 13217,
+      "bytes": 13932,
       "path": "_nlh-pages/georgetown.page",
-      "sha256": "ba0a59821938db0679c31d370f60e96572abbaa42974e85144445c8297554980"
+      "sha256": "61161faf1f721a1c2766733abfced83e4e4db1a4b600c6da2040219c424d97ca"
     },
     {
-      "bytes": 12247,
+      "bytes": 12914,
       "path": "_nlh-pages/give.page",
-      "sha256": "74224bf30b2f3d2519568a153e04a8be122217e6a235bb4669852ccda81ef327"
+      "sha256": "6c480c99cbac8ecada12be41c6de9d569276141b404a8420c10fd2199843c5ab"
     },
     {
-      "bytes": 13570,
+      "bytes": 14504,
       "path": "_nlh-pages/home.page",
-      "sha256": "e21ab08a9c4d8267a9516843dc0292a2e000a51065b84d69fc6e7111247ef68d"
+      "sha256": "9aa41a4df54c7fbcc6e4698e3d3f84c4c872a39868839fa04650a6169213d584"
     },
     {
       "bytes": 803,
@@ -47,59 +47,59 @@
       "sha256": "82e84d95c1958cc011f42e4c2fcbdefbeb3b6d6a39f33caa6e18d21fdebe9e55"
     },
     {
-      "bytes": 11237,
+      "bytes": 12148,
       "path": "_nlh-pages/pastor.page",
-      "sha256": "0560eb64189a66e955d023657680d4fd00b3be071aad39d33576fbe088362044"
+      "sha256": "91946997b6f9f44a047bd7b846317f15b5b006e03581f9f58d26b708c42f4ba1"
     },
     {
-      "bytes": 13953,
+      "bytes": 14636,
       "path": "_nlh-pages/pflugerville.page",
-      "sha256": "719f048759379d7f79a96bb26c0b75934a0edc7428b31f61edd7d82cdbecbe20"
+      "sha256": "74c5ee69dfaa7f013be256c74b98931db622bfdd5f1a02843f6007723d618cf2"
     },
     {
-      "bytes": 9801,
+      "bytes": 10468,
       "path": "_nlh-pages/prayer.page",
-      "sha256": "354858a9ccb4ec82084b68b623eeeba85b6c0fa3d707f3fd6b35e047d57f0ea7"
+      "sha256": "4630f474f0d587175326e11fb0207869a54f3fc6479f1c23822c3cef4db0fda0"
     },
     {
-      "bytes": 14433,
+      "bytes": 15087,
       "path": "_nlh-pages/privacy.page",
-      "sha256": "a247e5de929b6ade4072c881932342fb83e78a7c90ac30a2fc1d9e6ac6282254"
+      "sha256": "54dc5f91603b080ba23fa343762728255d1f564fd5d0afe0cd3f735f2b0d314d"
     },
     {
-      "bytes": 14784,
+      "bytes": 15467,
       "path": "_nlh-pages/round-rock.page",
-      "sha256": "5ba25c7a5bdb522ba9bf89e4a5d0f8f864c93508da8d9da1e616a4677dfc2922"
+      "sha256": "060ce79576d641b1e83b2af43a8546ec87b55e61b91abae075df6a2bdecd91c6"
     },
     {
-      "bytes": 13455,
+      "bytes": 14122,
       "path": "_nlh-pages/sms.page",
-      "sha256": "798a55eb7a943af9bc487f0fb70c2c001e58d297a6d60e71669c53c1185608fb"
+      "sha256": "795e8dcf6311c9025d00c1e2eea32056078d3cd491465a5428f297f0903e6195"
     },
     {
-      "bytes": 13049,
+      "bytes": 13764,
       "path": "_nlh-pages/taylor.page",
-      "sha256": "fec7739d4ce539e9e1321047b12314f6889059643070328e3cb91f49c52fa5f4"
+      "sha256": "ca03c84d3e2521a30a1c235084dc7aaccb0c7b9b82006fe738fea2a08cb5daef"
     },
     {
-      "bytes": 12577,
+      "bytes": 13231,
       "path": "_nlh-pages/terms.page",
-      "sha256": "5af13561a01fb7a5ce43ae83b60e19bfd9e84c0b3398e6995232ba08b22f25bb"
+      "sha256": "44655ea10af2a63ee8ddf814721df9d4326a5c944c0173a3fe0cafedac6e1588"
     },
     {
-      "bytes": 13614,
+      "bytes": 14281,
       "path": "_nlh-pages/textos.page",
-      "sha256": "da201cba4e0e2cf71517e71db54bb226db6286359c8015e792a70a2bde7fd127"
+      "sha256": "3ff8fbe2d69e3bdb9d35847da56a4f03fd812c16c5f53a748d4cf9b859ad70ac"
     },
     {
-      "bytes": 14199,
+      "bytes": 14870,
       "path": "_nlh-pages/visit.page",
-      "sha256": "4a96a957200019c8646c32982a56a7f47c953e34df14b9ede2ab608dc071d3f8"
+      "sha256": "e7908e0cd9fc9d41b63667c2a4eeaa66228e9ebfb8d2ed8596cd14d5abc27a94"
     },
     {
-      "bytes": 13302,
+      "bytes": 13993,
       "path": "_nlh-pages/what-to-expect.page",
-      "sha256": "ff7cbae6b172c4f594734d2983a7911fc59fa66257fbfd410a836faf0a0a9fd2"
+      "sha256": "d56bd211ed3c612369a599682c17ca3ef3cdc417b2bda26c857851e7e3749fc6"
     },
     {
       "bytes": 65,
@@ -107,9 +107,9 @@
       "sha256": "4d2faf8b9fecb0899ca909d08bb71e9d05f2ad0969325900594f61779276b07d"
     },
     {
-      "bytes": 6409,
+      "bytes": 6562,
       "path": "_worker.js",
-      "sha256": "7e3cc34a45ef84677d16dcce35c3528787bb7ac0bade3a7c0947ac42ab966227"
+      "sha256": "eb3b422bc5756b2062c7854caee7f85d669403a86dd1f7b122654ee99d49485d"
     },
     {
       "bytes": 13156,
@@ -117,9 +117,9 @@
       "sha256": "221cd6b9cd03d2d71db9f9fc2576b191f5f6023a99c041dead45dd2091c441ad"
     },
     {
-      "bytes": 23124,
+      "bytes": 23222,
       "path": "assets/css/refinement.css",
-      "sha256": "9d2c713ef27dd57d153ec63050b22ea6c7c703243f511b5e98e10154cf766281"
+      "sha256": "c313ecb6012d6f46910903a365a855e91643b4c41a0f3a3290027b3e36846d39"
     },
     {
       "bytes": 27511,
@@ -147,6 +147,16 @@
       "sha256": "178aa1d3833163d56c4bbffdd80758bcc6d8127b1a8b727345cd256a491aedbb"
     },
     {
+      "bytes": 46815,
+      "path": "assets/images/pastor-bernhard-suppan-600.jpg",
+      "sha256": "4f68d3cdb4b22fc432e376f755c965da009f0d514acea3b6d80a8dd412d2e254"
+    },
+    {
+      "bytes": 32012,
+      "path": "assets/images/pastor-bernhard-suppan-600.webp",
+      "sha256": "e6b34d4ed4ba93f8cfe85dd9b9dd5cf1d80e87a35b96198aece40de045396592"
+    },
+    {
       "bytes": 188438,
       "path": "assets/images/prayer-youth.jpg",
       "sha256": "4b40efba7e3b7ad39e2e7e2b2ac9590576ddabd04c7eaaae6281df63e9c77974"
@@ -172,6 +182,11 @@
       "sha256": "245658f9db1e753d20567ef38fcac321866ad0c103f6912b8f899da83e733ff8"
     },
     {
+      "bytes": 32,
+      "path": "d1d93d1c0adc419fa8e1fa1488c04512.txt",
+      "sha256": "faad1bc4c81ebe1bb050d1486bd929eeacaf10be34c53d2a2c04778e1fd58c4f"
+    },
+    {
       "bytes": 514,
       "path": "favicon-16x16.png",
       "sha256": "380704ec64d59aa5c14bd76cba5f0adaf6c4ff31a6bbc5bdf217f186f94808c8"
@@ -187,6 +202,11 @@
       "sha256": "11a2b24070c54da7784292130979dc675e4b11131425a866c08e03207a095eda"
     },
     {
+      "bytes": 1884,
+      "path": "llms.txt",
+      "sha256": "227be59768c725f112c4ba4858fabc5223eb1b4781f42e69e7873a7a4a3e2fc1"
+    },
+    {
       "bytes": 70,
       "path": "robots.txt",
       "sha256": "6f8b11ec6c7874269df023e40c7b4d45cd9fee61e57be104c23e7439c00f36b2"
@@ -197,5 +217,5 @@
       "sha256": "d9b8c6e4eaf35b65d38b538ecc0fdc5bdfdfcc0edd5e4ade1b7642a16ee85d72"
     }
   ],
-  "release": "Approved September 28, 2026 A2P 10DLC compliance release: /privacy/, /terms/, /sms/, /textos/ (bilingual) and footer legal links"
+  "release": "Approved baseline = live production Cloudflare Pages deploy 1f988a40 (2026-10-20): A2P 10DLC release (2026-09-28) + footer legal (#10) + GA4 hostname gate (12ed5fe3) + 10/19 design (1fd5ca9f) + IndexNow key file. Rebuilt 2026-10-20, CHIEF-approved."
 }
