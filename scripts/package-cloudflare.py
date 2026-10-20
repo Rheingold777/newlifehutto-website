@@ -149,6 +149,10 @@ def build(site: Path, output: Path, release_path: Path, rollback_archive: Path |
     if (site / "llms.txt").is_file():
         files["llms.txt"] = (site / "llms.txt").read_bytes()
         public_assets.append("/llms.txt")
+    # IndexNow key file (2026-10-20).
+    for key_file in sorted(site.glob("[0-9a-f]"*32 + ".txt")):
+        files[key_file.name] = key_file.read_bytes()
+        public_assets.append("/" + key_file.name)
     not_found = (RUNTIME / "404.html").read_bytes()
     files["_nlh-pages/not-found.page"] = not_found
     files["404.html"] = not_found  # Also disables Pages' implicit SPA fallback.
